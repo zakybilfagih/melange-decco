@@ -13,7 +13,7 @@ let testGoodDecode = (name, decode, json, expected) =>
     test(name, () =>
         switch (decode(json)) {
             | Belt.Result.Ok(actual) => expect(actual) |> toEqual(expected)
-            | Belt.Result.Error({ Decco.path, message }) => failwith({j|Decode error: $message ($path)|j})
+            | Belt.Result.Error({ Decco.path, message, _ }) => failwith({j|Decode error: $message ($path)|j})
         }
     );
 

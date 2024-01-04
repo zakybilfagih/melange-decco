@@ -1,0 +1,6 @@
+(library
+ (name Decco)
+ (public_name decco.lib)
+ (modes melange)
+ (preprocess
+  (pps melange.ppx decco.ppx)))

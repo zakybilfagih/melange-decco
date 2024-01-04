@@ -1,5 +1,0 @@
-(executable
- (package ppx_decco)
- (name bin)
- (public_name ppx_decco)
- (libraries ppx_decco))

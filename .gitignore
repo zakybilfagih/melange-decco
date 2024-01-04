@@ -59,9 +59,6 @@ node_modules
 
 .DS_Store
 
-# Bucklescript output
-lib/
-
 .merlin
 
 .bsb.lock
@@ -78,3 +75,5 @@ package-links.json
 
 _esy/
 *.exe
+
+_opam
