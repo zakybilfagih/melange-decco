@@ -149,7 +149,7 @@ let generateUnboxedDecode = (generatorSettings, row) => {
 
                             Some([%expr (v) =>
                                 [%e d](v)
-                                -> Belt.Result.map(v => [%e constructor])
+                                |> Belt.Result.map(_, v => [%e constructor])
                             ])
                         }
                         | None => None

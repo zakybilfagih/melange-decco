@@ -34,13 +34,13 @@ let generateDictGet = ({ key, codecs: (_, decoder), default }) => {
     switch default {
         | Some(default) => [%expr
             Js.Dict.get(dict, [%e key])
-            -> Belt.Option.map([%e decoder])
-            -> Belt.Option.getWithDefault(Belt.Result.Ok([%e default]))
+            |> Belt.Option.map(_, [%e decoder])
+            |> Belt.Option.getWithDefault(_, Belt.Result.Ok([%e default]))
         ];
 
         | None => [%expr
             Js.Dict.get(dict, [%e key])
-            -> Belt.Option.getWithDefault(Js.Json.null)
+            |> Belt.Option.getWithDefault(_, Js.Json.null)
             |> [%e decoder]
         ];
     };
@@ -98,7 +98,7 @@ let generateDecoder = (decls, unboxed) => {
 
             [%expr (v) =>
                 [%e BatOption.get(d)](v)
-                -> Belt.Result.map(v => [%e recordExpr])
+                |> Belt.Result.map(_, v => [%e recordExpr])
             ]
         } :
             [%expr (v) =>

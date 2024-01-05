@@ -131,7 +131,7 @@ let generateUnboxedDecode = (generatorSettings, { pcd_name: { txt: name }, pcd_a
 
                             Some([%expr (v) =>
                                 [%e d](v)
-                                -> Belt.Result.map(v => [%e constructor])
+                                |> Belt.Result.map(_, v => [%e constructor])
                             ])
                         }
                         | None => None

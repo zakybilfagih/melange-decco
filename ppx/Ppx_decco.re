@@ -20,7 +20,7 @@ let structure_mapper = (_, s) => (new mapper)#structure(s);
 let signature_mapper = (_, s) => (new mapper)#signature(s);
 
 Ppxlib.Driver.V2.register_transformation(
-  ~preprocess_impl=structure_mapper,
-  ~preprocess_intf=signature_mapper,
+  ~impl=structure_mapper,
+  ~intf=signature_mapper,
   "decco",
 );
