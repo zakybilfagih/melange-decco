@@ -2,10 +2,10 @@ opam-version: "2.0"
 version: "1.0"
 synopsis: "melange-decco"
 description: "OCaml PPX which generates JSON (de)serializers for user-defined types for Melange output"
-dev-repo: "git+https://github.com/rolandpeelen/decco"
+dev-repo: "git+https://github.com/zakybilfagih/melange-decco"
 license: "MIT"
-homepage: "https://github.com/rolandpeelen/decco"
-bug-reports: "https://github.com/rolandpeelen/decco"
+homepage: "https://github.com/zakybilfagih/melange-decco"
+bug-reports: "https://github.com/zakybilfagih/melange-decco"
 depends: [
   "ocaml" {>= "5.1.1"}
   "dune" {>= "3.9.0" }
