@@ -1,6 +1,7 @@
 (library
  (name Decco)
- (public_name decco.lib)
+ (public_name melange-decco.lib)
+ (libraries melange.belt)
  (modes melange)
  (preprocess
-  (pps melange.ppx decco.ppx)))
+  (pps melange.ppx melange-decco.ppx)))

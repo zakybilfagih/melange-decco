@@ -1,15 +1,15 @@
 opam-version: "2.0"
 version: "1.0"
-synopsis: "decco"
-description: "Bucklescript PPX which generates JSON (de)serializers for user-defined types"
+synopsis: "melange-decco"
+description: "OCaml PPX which generates JSON (de)serializers for user-defined types for Melange output"
 dev-repo: "git+https://github.com/rolandpeelen/decco"
 license: "MIT"
 homepage: "https://github.com/rolandpeelen/decco"
 bug-reports: "https://github.com/rolandpeelen/decco"
 depends: [
-  "ocaml"
-  "dune"
-  "melange" {>= "2.0.0"}
+  "ocaml" {>= "5.1.1"}
+  "dune" {>= "3.9.0" }
+  "melange" {>= "3.0.0-51"}
   "reason" {>= "3.10.0"}
   "ppxlib" {>= "0.31.0"}
   "melange-jest" {with-test}

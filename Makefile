@@ -1,4 +1,4 @@
-project_name = decco
+project_name = melange-decco
 
 DUNE = opam exec -- dune
 
@@ -13,21 +13,21 @@ help: ## Print this help message
 
 .PHONY: create-switch
 create-switch: ## Create opam switch
-	opam switch create . 5.1.0 -y --deps-only
+	opam switch create . 5.1.1 -y --deps-only
 
 .PHONY: init
 init: create-switch install ## Configure everything to develop this repository in local
 
 .PHONY: install
 install: ## Install development dependencies
-	yarn
+	pnpm install
 	opam update
 	opam install -y . --deps-only --with-test
 
 .PHONY: test
 test: ## Run tests using yest
 	$(DUNE) build
-	yarn test
+	pnpm test
 
 .PHONY: build
 build: ## Build the project

@@ -1,11 +1,10 @@
 (library
-  (name DeccoPpx)
-  (public_name decco.ppx)
-  (libraries 
-    ppxlib
-    reason)
-  (flags 
-    (:standard -w -9)) ; 9 = labels not bound in record pattern
-  (kind ppx_rewriter)
-  (preprocess
-   (pps ppxlib.metaquot)))
+ (name DeccoPpx)
+ (public_name melange-decco.ppx)
+ (libraries ppxlib reason melange.belt)
+ (flags
+  (:standard -w -9))
+ ; 9 = labels not bound in record pattern
+ (kind ppx_rewriter)
+ (preprocess
+  (pps ppxlib.metaquot)))

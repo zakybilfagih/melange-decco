@@ -1,1 +1,1 @@
-let () = Ppxlib.Driver.standalone ()
+let () = Ppxlib.Driver.standalone();

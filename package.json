@@ -1,17 +1,13 @@
 {
-  "name": "decco",
+  "name": "melange-decco",
   "license": "MIT",
   "version": "1.6.0",
-  "description": "Bucklescript PPX which generates JSON (de)serializers for user-defined types",
+  "description": "OCaml PPX which generates JSON (de)serializers for user-defined types for Melange output",
   "scripts": {
     "test": "jest --config",
     "tdd": "jest --watchAll"
   },
   "devDependencies": {
     "jest": "^26.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:reasonml-labs/decco.git"
   }
 }

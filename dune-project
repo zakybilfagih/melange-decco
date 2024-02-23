@@ -1,3 +1,5 @@
-(lang dune 3.8)
+(lang dune 3.9)
+
 (using melange 0.1)
-(name melange-pancake)
+
+(name melange-decco)

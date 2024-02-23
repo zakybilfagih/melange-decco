@@ -1,18 +1,13 @@
 open Ppxlib;
 
-
 class mapper = {
   as self;
   inherit class Ast_traverse.map;
   pub! signature = signature => {
-    signature
-    |> List.map(Signature.mapSignatureItem(self))
-    |> List.concat;
+    signature |> List.map(Signature.mapSignatureItem(self)) |> List.concat;
   };
   pub! structure = structure => {
-    structure
-    |> List.map(Structure.mapStructureItem(self))
-    |> List.concat;
+    structure |> List.map(Structure.mapStructureItem(self)) |> List.concat;
   };
 };
 

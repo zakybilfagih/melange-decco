@@ -1,7 +1,5 @@
 (melange.emit
  (target test)
- (libraries 
-   melange-jest.jest
-   decco.lib)
+ (libraries melange.belt melange-jest.jest melange-decco.lib)
  (preprocess
-  (pps melange.ppx decco.ppx)))
+  (pps melange.ppx melange-decco.ppx)))
