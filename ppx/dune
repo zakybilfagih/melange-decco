@@ -1,7 +1,7 @@
 (library
  (name DeccoPpx)
  (public_name melange-decco.ppx)
- (libraries ppxlib reason melange.belt)
+ (libraries ppxlib reason)
  (flags
   (:standard -w -9))
  ; 9 = labels not bound in record pattern
